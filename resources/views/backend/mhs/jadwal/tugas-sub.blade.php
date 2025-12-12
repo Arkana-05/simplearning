@@ -86,7 +86,7 @@
                           @if ($s->link) 
                               <a href="{{ $s->link }}" target="_blank">Buka Link</a>
                           @elseif ($s->file)
-                              <a href="{{ asset('img/tugas/submit/'.$s->file) }}" target="_blank">Download File</a>
+                              <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/submit/'.$s->file) }}" target="_blank">Download File</a>
                           @else
                               <span class="text-danger">Tidak ada file/link</span>
                           @endif

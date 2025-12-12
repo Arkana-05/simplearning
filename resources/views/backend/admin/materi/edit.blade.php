@@ -58,7 +58,7 @@
                             <label for="foto">File Materi </label>
                             <div class="col-sm-12">
                                 <input type="file" name="file" id="file" class="form-control @error('file') is-invalid @enderror" value="{{ old('file') }}">
-                                <a href="{{ asset('img/materi/'.$data->file) }}" target="_blank">Lihat File</a>
+                                <a href="{{ asset('https://simplearning-j968.vercel.app/img/materi/'.$data->file) }}" target="_blank">Lihat File</a>
                                 @error('file')
                                     <div class="invalid invalid-feedback">{{$message}}</div>
                                 @enderror

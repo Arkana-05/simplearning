@@ -96,7 +96,7 @@
                             <label for="foto">Foto Dosen </label>
                             <div class="col-sm-12">
                                 <input type="file" name="foto" id="foto" class="form-control @error('foto') is-invalid @enderror" value="{{ old('foto') }}">
-                                <img src="{{ asset('img/dosen/profile/'.$data->foto) }}" width="100px" class="mt-2" alt="foto" id="gambar-preview">
+                                <img src="{{ asset('https://simplearning-j968.vercel.app/img/dosen/profile/'.$data->foto) }}" width="100px" class="mt-2" alt="foto" id="gambar-preview">
                                 @error('foto')
                                     <div class="invalid invalid-feedback">{{$message}}</div>
                                 @enderror

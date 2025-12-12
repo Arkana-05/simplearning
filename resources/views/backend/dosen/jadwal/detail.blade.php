@@ -174,7 +174,7 @@
                                 @foreach($data->absendosen as $p)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td><img src="{{ asset('img/dosen/absenfile/'.$p->file) ?? '-' }}" width="100px" class="mt-2" alt="bukti" id="gambar-preview"></td>
+                                    <td><img src="{{ asset('https://simplearning-j968.vercel.app/img/dosen/absenfile/'.$p->file) ?? '-' }}" width="100px" class="mt-2" alt="bukti" id="gambar-preview"></td>
                                     <td>{{ $p->jadwal->matkul->kode }}</td> 
                                     <td>{{ $p->dosen->kode_dosen ?? '-' }}</td> 
                                     <td>{{ $p->status ?? '-' }}</td> 

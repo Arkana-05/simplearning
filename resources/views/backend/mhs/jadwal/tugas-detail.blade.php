@@ -75,7 +75,7 @@
                   <tr>
                       <td>{{ $loop->iteration }}</td>
                       <td>
-                          <a href="{{ asset('img/tugas/'.$t->file) }}" target="_blank">
+                          <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$t->file) }}" target="_blank">
                               <i class="fas fa-book"></i>
                           </a>
                       </td>

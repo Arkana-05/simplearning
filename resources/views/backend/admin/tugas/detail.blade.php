@@ -118,7 +118,7 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>
                             @if ($submit)
-                                <a href="{{ asset('img/tugas/submit/'.$submit->file) }}" target="_blank" class="fw-semibold text-info">
+                                <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/submit/'.$submit->file) }}" target="_blank" class="fw-semibold text-info">
                                     {{ $submit->file }}
                                 </a>
                             @else
@@ -279,7 +279,7 @@
                                                                 </p>
 
                                                                 @if ($submit)
-                                                                    <a href="{{ asset('img/tugas/submit/'.$submit->file) }}" target="_blank" 
+                                                                    <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/submit/'.$submit->file) }}" target="_blank" 
                                                                         class="fw-semibold text-info">
                                                                         {{ $submit->file }}
                                                                     </a>

@@ -82,7 +82,7 @@
               @foreach ($data as $d)                
                 <tr>
                   <td>{{ $loop->iteration }}</td>
-                  <td><a href="{{ asset('img/materi/'.$d->file) }}" target="_blank">Download File</a></td>
+                  <td><a href="{{ asset('https://simplearning-j968.vercel.app/img/materi/'.$d->file) }}" target="_blank">Download File</a></td>
                   <td>{{ $d->judul }}</td>
                   <td>{{ $d->matkul->nama }}</td>
                   {{--  <td>{{ $d->kelas->nama }}</td>  --}}
@@ -171,7 +171,7 @@
 
                                                 <div>
                                                     <div class="text-muted small">File Materi</div>
-                                                    <a href="{{ asset('img/materi/'.$d->file) }}" target="_blank"
+                                                    <a href="{{ asset('https://simplearning-j968.vercel.app/img/materi/'.$d->file) }}" target="_blank"
                                                       class="fw-semibold text-decoration-none" style="color:#2563eb;">
                                                       {{ $d->file }}
                                                     </a>

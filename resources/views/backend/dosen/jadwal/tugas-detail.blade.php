@@ -89,11 +89,11 @@
                       <td>{{ $loop->iteration }}</td>
                       <td>
                         @if(Auth::user()->level == 'dosen')
-                          <a href="{{ asset('img/tugas/'.$t->file) }}" target="_blank">
+                          <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$t->file) }}" target="_blank">
                               <i class="fas fa-book">File Tugas</i>
                           </a>
                         @elseif(Auth::user()->level == 'mhs')
-                          <a href="{{ asset('img/tugas/'.$t->file) }}" target="_blank">
+                          <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$t->file) }}" target="_blank">
                               <i class="fas fa-book"> Tugas</i>
                           </a>
                         @endif

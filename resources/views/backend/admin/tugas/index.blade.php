@@ -82,7 +82,7 @@
               @foreach ($data as $d)                
                 <tr>
                   <td>{{ $loop->iteration }}</td>
-                  <td><a href="{{ asset('img/tugas/'.$d->file) }}" target="_blank">Download File</a></td>
+                  <td><a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$d->file) }}" target="_blank">Download File</a></td>
                   <td>{{ $d->judul }}</td>
                   <td>{{ $d->jadwal->matkul->nama }}</td>
                   <td>{{ $d->jadwal->kelas->nama }}</td>
@@ -159,7 +159,7 @@
                                                 <p class="text-muted small mb-1">
                                                     <i class="fas fa-file-alt me-1 text-info"></i>Intruksi Tugas
                                                 </p>
-                                                <a href="{{ asset('img/tugas/'.$d->file) }}" 
+                                                <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$d->file) }}" 
                                                   target="_blank" class="fw-semibold text-info">
                                                     {{ $d->file }}
                                                 </a>
@@ -256,7 +256,7 @@
                           <td>{{ $p->nama }}</td>
                           <td>{{ $p->kelas->nama }}</td>
                           <td>{{ $p->kelas->judul }}</td>
-                          <td><a href="{{ asset('file/tugas/'.$p->file) }}" target="_blank">{{ $p->file }}</a></td>
+                          <td><a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$p->file) }}" target="_blank">{{ $p->file }}</a></td>
                           <td>{{ $p->created_at->format('d M Y H:i') }}</td>
 
                           <td>
@@ -284,7 +284,7 @@
                                   <h5 class="fw-bold mb-2">{{ $p->mhs->nama }}</h5>
                                   <p><b>Kelas:</b> {{ $p->tugas->kelas->nama }}</p>
                                   <p><b>Tugas:</b> {{ $p->tugas->judul }}</p>
-                                  <p><b>File:</b> <a href="{{ asset('file/tugas/'.$p->file) }}" target="_blank">{{ $p->file }}</a></p>
+                                  <p><b>File:</b> <a href="{{ asset('https://simplearning-j968.vercel.app/img/tugas/'.$p->file) }}" target="_blank">{{ $p->file }}</a></p>
                                   <p><b>Diupload:</b> {{ $p->created_at->format('d M Y H:i') }}</p>
                                   <p><b>Status:</b> 
                                       @if ($p->created_at > $p->tugas->deadline)

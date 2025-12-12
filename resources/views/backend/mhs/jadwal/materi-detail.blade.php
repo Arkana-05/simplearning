@@ -70,7 +70,7 @@
               @foreach ($data->materi as $d)                
                 <tr>
                   <td>{{ $loop->iteration }}</td>
-                  <td><a href="{{ asset('img/materi/'.$d->file) }}" target="_blank"><i class="fas fa-book"></i> {{ $d->matkul->kode }}</a></td>
+                  <td><a href="{{ asset('https://simplearning-j968.vercel.app/img/materi/'.$d->file) }}" target="_blank"><i class="fas fa-book"></i> {{ $d->matkul->kode }}</a></td>
                   <td>{{ $d->judul }}</td>
                   <td>{{ $d->matkul->nama }}</td>
                   <td>{!! $d->desc !!}</td>
