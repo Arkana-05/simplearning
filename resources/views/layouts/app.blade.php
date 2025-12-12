@@ -20,7 +20,7 @@
             "Font Awesome 5 Brands",
             "simple-line-icons",
           ],
-          urls: ["{{ asset('https://simplearning-j968.vercel.app/assets/css/fonts.min.css') }}"],
+          urls: ["https://simplearning-j968.vercel.app/assets/css/fonts.min.css"],
         },
         active: function () {
           sessionStorage.fonts = true;
