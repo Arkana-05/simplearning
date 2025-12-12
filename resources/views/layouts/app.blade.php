@@ -4,12 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     @yield('title')
     <meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport"/>
-    <link rel="icon" href="{{ asset('assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon"/>
+    <link rel="icon" href="{{ asset('https://simplearning-j968.vercel.app/assets/img/kaiadmin/favicon.ico') }}" type="image/x-icon"/>
 
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.2/classic/ckeditor.js"></script>
 
     {{--  Fonts and icons  --}} 
-    <script src="{{ asset('assets/js/plugin/webfont/webfont.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/webfont/webfont.min.js') }}"></script>
     <script>
       WebFont.load({
         google: { families: ["Public Sans:300,400,500,600,700"] },
@@ -20,7 +20,7 @@
             "Font Awesome 5 Brands",
             "simple-line-icons",
           ],
-          urls: ["{{ asset('assets/css/fonts.min.css') }}"],
+          urls: ["{{ asset('https://simplearning-j968.vercel.app/assets/css/fonts.min.css') }}"],
         },
         active: function () {
           sessionStorage.fonts = true;
@@ -29,12 +29,12 @@
     </script>
 
     {{--  CSS Files  --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins.min.css') }}" />
-    <link rel="stylesheet" href="{{ asset('assets/css/kaiadmin.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://simplearning-j968.vercel.app/assets/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://simplearning-j968.vercel.app/assets/css/plugins.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://simplearning-j968.vercel.app/assets/css/kaiadmin.min.css') }}" />
 
     {{--  CSS Just for demo purpose, don't include it in your project  --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('https://simplearning-j968.vercel.app/assets/css/demo.css') }}" />
     
     {{--  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">  --}}
     <!-- jQuery -->
@@ -55,7 +55,7 @@
           {{--  Logo Header   --}}
           <div class="logo-header" data-background-color="dark">
             <a href="{{ url('backend/dashboard')}}" class="logo">
-              <img src="{{ asset('assets/img/kaiadmin/logo_light.svg') }}" alt="navbar brand" class="navbar-brand" height="20" />
+              <img src="{{ asset('https://simplearning-j968.vercel.app/assets/img/kaiadmin/logo_light.svg') }}" alt="navbar brand" class="navbar-brand" height="20" />
             </a>
             <div class="nav-toggle">
               <button class="btn btn-toggle toggle-sidebar">
@@ -271,7 +271,7 @@
             {{--  Logo Header   --}}
             <div class="logo-header" data-background-color="dark">
               <a href="{{ url('backend/dashboard')}}" class="logo">
-                <img src="{{ asset('assets/img/kaiadmin/logo_light.svg') }}" alt="navbar brand" class="navbar-brand" height="20" />
+                <img src="{{ asset('https://simplearning-j968.vercel.app/assets/img/kaiadmin/logo_light.svg') }}" alt="navbar brand" class="navbar-brand" height="20" />
               </a>
               <div class="nav-toggle">
                 <button class="btn btn-toggle toggle-sidebar">
@@ -295,13 +295,13 @@
                   <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false" >
                     <div class="avatar-sm">
                       @if (Auth::user()->level == 'admin')
-                        <img src="{{ asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                        <img src="{{ asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                       @elseif (Auth::user()->level == 'dosen')
-                        <img src="{{ Auth::user()->dosen->foto ? asset('img/dosen/profile/' . Auth::user()->dosen->foto) : asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                        <img src="{{ Auth::user()->dosen->foto ? asset('https://simplearning-j968.vercel.app/img/dosen/profile/' . Auth::user()->dosen->foto) : asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                       @elseif (Auth::user()->level == 'mhs')
-                        <img src="{{ Auth::user()->mhs->foto ? asset('img/mahasiswa/profile/' . Auth::user()->mhs->foto) : asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                        <img src="{{ Auth::user()->mhs->foto ? asset('https://simplearning-j968.vercel.app/img/mahasiswa/profile/' . Auth::user()->mhs->foto) : asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                       @endif
-                      {{--  <img src="{{ asset('assets/img/person_circle_icon_159926.png') }}" alt="..." class="avatar-img rounded-circle" />  --}}
+                      {{--  <img src="{{ asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="..." class="avatar-img rounded-circle" />  --}}
                     </div>
                     <span class="profile-username">
                       <span class="op-7">Hi,</span>
@@ -322,11 +322,11 @@
                         <div class="user-box">
                           <div class="avatar-lg">
                             @if (Auth::user()->level == 'admin')
-                              <img src="{{ asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                              <img src="{{ asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                             @elseif (Auth::user()->level == 'dosen')
-                              <img src="{{ Auth::user()->dosen->foto ? asset('img/dosen/profile/' . Auth::user()->dosen->foto) : asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                              <img src="{{ Auth::user()->dosen->foto ? asset('https://simplearning-j968.vercel.app/img/dosen/profile/' . Auth::user()->dosen->foto) : asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                             @elseif (Auth::user()->level == 'mhs')
-                              <img src="{{ Auth::user()->mhs->foto ? asset('img/mahasiswa/profile/' . Auth::user()->mhs->foto) : asset('assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
+                              <img src="{{ Auth::user()->mhs->foto ? asset('https://simplearning-j968.vercel.app/img/mahasiswa/profile/' . Auth::user()->mhs->foto) : asset('https://simplearning-j968.vercel.app/assets/img/person_circle_icon_159926.png') }}" alt="image profile" class="avatar-img rounded" />
                             @endif
                           </div>
                           <div class="u-text">
@@ -395,41 +395,41 @@
     </div>
 
       {{--  Core JS Files     --}}
-    <script src="{{ asset('assets/js/core/jquery-3.7.1.min.js') }}"></script>
-    <script src="{{ asset('assets/js/core/popper.min.js') }}"></script>
-    <script src="{{ asset('assets/js/core/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/core/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/core/popper.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/core/bootstrap.min.js') }}"></script>
 
     {{--  jQuery Scrollbar   --}}
-    <script src="{{ asset('assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
 
     {{--  Chart JS   --}}
-    <script src="{{ asset('assets/js/plugin/chart.js/chart.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/chart.js/chart.min.js') }}"></script>
 
     {{--  jQuery Sparkline   --}}
-    <script src="{{ asset('assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
 
     {{--  Chart Circle   --}}
-    <script src="{{ asset('assets/js/plugin/chart-circle/circles.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/chart-circle/circles.min.js') }}"></script>
 
     {{--  Datatables   --}}
-    <script src="{{ asset('assets/js/plugin/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/datatables/datatables.min.js') }}"></script>
 
     {{--  Bootstrap Notify   --}}
-    <script src="{{ asset('assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
 
     {{--  jQuery Vector Maps   --}}
-    <script src="{{ asset('assets/js/plugin/jsvectormap/jsvectormap.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugin/jsvectormap/world.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/jsvectormap/jsvectormap.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/jsvectormap/world.js') }}"></script>
 
     {{--  Sweet Alert   --}}
-    <script src="{{ asset('assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
 
     {{--  Kaiadmin JS   --}}
-    <script src="{{ asset('assets/js/kaiadmin.min.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/kaiadmin.min.js') }}"></script>
 
     {{--  Kaiadmin DEMO methods, dont include it in your project!   --}}
-    <script src="{{ asset('assets/js/setting-demo.js') }}"></script>
-    <script src="{{ asset('assets/js/demo.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/setting-demo.js') }}"></script>
+    <script src="{{ asset('https://simplearning-j968.vercel.app/assets/js/demo.js') }}"></script>
     
     {{--  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  --}}
     @yield('script')
