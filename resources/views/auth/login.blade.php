@@ -6,7 +6,7 @@
 @endsection
 @section('video')
     <video autoplay muted loop id="background-video">
-        <source src="https://simplearning-j968.vercel.app/img/vid.mp4" type="video/mp4">
+        <source src="https://simplearning-j968.vercel.app/public/img/vid.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 @endsection
