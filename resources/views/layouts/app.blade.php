@@ -100,10 +100,25 @@
                 </a>
               </li> --}}
               @if (Auth::user()->level == 'mhs')
-            <li class="nav-item {{ (Request::is('backend/jadwalmh', 'backend/jadwalmh/create', 'backend/jadwalmh/*/edit', 'backend/detail-jadwalmh/*', 'backend/tugas-ds/*', 'backend/materi/*', 'backend/tugas-sub/create', 'backend/tugas-sub/*/edit', 'backend/tugas-submit/*', 'backend/jadwalmh-detail/*') ? 'active' : '') }}">
+              <li class="nav-item {{ (Request::is('backend/profile/*/edit') ? 'active' : '') }}">
+                <a href="{{ url('backend/profile/' . Auth::user()->mhs->id . '/edit') }}">
+                  <i class="fas fa-users"></i>
+                  <p>Profile</p>
+                </a>
+              </li>
+              <li class="nav-item {{ (Request::is('backend/jadwalmh', 'backend/jadwalmh/create', 'backend/jadwalmh/*/edit', 'backend/detail-jadwalmh/*', 'backend/tugas-ds/*', 'backend/materi/*', 'backend/tugas-sub/create', 'backend/tugas-sub/*/edit', 'backend/tugas-submit/*', 'backend/jadwalmh-detail/*') ? 'active' : '') }}">
                 <a href="{{ url('backend/jadwalmh') }}">
                   <i class="fas fa-graduation-cap"></i>
                   <p>Jadwal</p>
+                </a>
+              </li>
+              
+              @endif 
+              @if (Auth::user()->level == 'dosen')
+              <li class="nav-item {{ (Request::is('backend/profile/*/edit') ? 'active' : '') }}">
+              <a href="{{ url('backend/profile/' . Auth::user()->dosen->id . '/edit') }}">
+                  <i class="fas fa-users"></i>
+                  <p>Profile</p>
                 </a>
               </li>
               @endif 

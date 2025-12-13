@@ -54,6 +54,9 @@ Route::prefix('backend/')->group(function () {
     Route::resource('tugas-sub', SubmitController::class)->names('backend.tugas-sub')->middleware('auth');
     Route::resource('nilai', NilaiController::class)->names('backend.nilai')->middleware('auth');
 
+    Route::get('/profile/{id}/edit', [DosenRoleController::class,  'profile'])->name('profile')->middleware('auth');
+    Route::put('backend/profile', [DosenRoleController::class, 'update'])->name('backend.profile.update');
+    
     // ROLE DOSEN
     Route::get('/ajar', [DosenRoleController::class,  'index'])->name('ajar')->middleware('auth');
     Route::get('/tugas-ds/{id}', [DosenRoleController::class,  'tugas'])->name('tugas')->middleware('auth');

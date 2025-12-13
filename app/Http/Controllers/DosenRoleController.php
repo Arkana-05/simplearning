@@ -13,9 +13,56 @@ use App\Models\Pertemuan;
 use App\Models\Absendosen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class DosenRoleController extends Controller
 {
+    public function profile(Request $request, String $id)
+    {
+        $user = auth()->user();
+        if ($user->level == 'dosen') {
+            $data = $user->dosen;
+        } elseif ($user->level == 'mhs') {
+            $data = $user->mhs;
+        } else {
+            abort(403);
+        }
+        return view('backend.dosen.profile', compact('data'));
+    }
+
+    public function update(Request $request)
+    {
+        $user = auth()->user();
+
+        // ===== VALIDASI =====
+        $request->validate([
+            'nama' => 'required|string|max:255',
+            'foto' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'password' => 'nullable|min:6|confirmed'
+        ]);
+
+        $profile = $user->level == 'dosen' ? $user->dosen : $user->mhs;
+
+        $profile->nama = $request->nama;
+
+        if ($request->hasFile('foto')) {
+            $file = $request->file('foto');
+            $filename = time().'_'.$file->getClientOriginalName();
+            $file->move(public_path(
+                $user->level == 'dosen' ? 'img/dosen/profile' : 'img/mahasiswa/profile'
+            ), $filename);
+
+            $profile->foto = $filename;
+        }
+
+        $profile->save();
+        if ($request->filled('password')) {
+            $user->password = Hash::make($request->password);
+            $user->save();
+        }
+
+        return back()->with('success', 'Profile berhasil diperbarui');
+    }
     public function index()
     {
         $dosenId = Auth::user()->dosen->id;
