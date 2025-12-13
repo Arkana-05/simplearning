@@ -49,7 +49,7 @@ class DosenRoleController extends Controller
             $file = $request->file('foto');
             $filename = time().'_'.$file->getClientOriginalName();
             $file->move(public_path(
-                $user->level == 'dosen' ? 'https://simplearning-j968.vercel.app/img/dosen/profile' : 'img/mahasiswa/profile'
+                $user->level == 'dosen' ? 'img/dosen/profile' : 'img/mahasiswa/profile'
             ), $filename);
 
             $profile->foto = $filename;
